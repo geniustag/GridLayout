@@ -4,6 +4,7 @@ platform :ios, '8.0'
 
 target 'GridLayout_Example' do
   pod 'GridLayout', :path => '../'
+  pod 'Masonry'
 
   target 'GridLayout_Tests' do
     inherit! :search_paths

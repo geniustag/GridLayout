@@ -1,0 +1,24 @@
+PODS:
+  - GridLayout (0.1.0):
+    - Masonry
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - GridLayout (from `../`)
+  - Masonry
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+
+EXTERNAL SOURCES:
+  GridLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GridLayout: 35ba17f71c3f3f305f02be8bb801e574a6d93ed6
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 6422fb0823a524c7a715303a48183e7bfd450e24
+
+COCOAPODS: 1.6.1
