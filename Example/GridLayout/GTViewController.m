@@ -25,7 +25,7 @@
     
     [self.view addSubview:contentView];
     
-    for (int i=0; i < 9; i++) {
+    for (int i=0; i < 3; i++) {
         UIView *view = [UIView new];
         view.backgroundColor = UIColor.redColor;
         [contentView addSubview:view];

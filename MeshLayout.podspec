@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'GridLayout'
-  s.version          = '0.0.1'
+  s.name             = 'MeshLayout'
+  s.version          = '0.0.2'
   s.summary          = 'Grid layout base on Masonry'
 
 # This description is used to generate tags and improve search results.

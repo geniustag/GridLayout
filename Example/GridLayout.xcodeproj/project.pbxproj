@@ -252,6 +252,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "547188371@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = DHF573YC2L;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -504,6 +507,7 @@
 			baseConfigurationReference = 8A414B3D50F29FFCFF390F27 /* Pods-GridLayout_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DHF573YC2L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GridLayout/GridLayout-Prefix.pch";
 				INFOPLIST_FILE = "GridLayout/GridLayout-Info.plist";
@@ -520,6 +524,7 @@
 			baseConfigurationReference = 93EB863A7DDDE89A6B80199D /* Pods-GridLayout_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DHF573YC2L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GridLayout/GridLayout-Prefix.pch";
 				INFOPLIST_FILE = "GridLayout/GridLayout-Info.plist";

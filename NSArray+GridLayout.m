@@ -64,11 +64,23 @@
     NSArray<NSArray *> *verticalArray = axis == GridAxisTypeHorizontal ? nolinearArray : linearArray;
     
     [horizontalArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj mas_distributeViewsAlongAxis:MASAxisTypeHorizontal  withFixedSpacing:fixedSpacing leadSpacing:insets.left tailSpacing:insets.right];
+        if (obj.count < 2) {
+            [obj.firstObject mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.offset(insets.left);
+                make.right.offset(-insets.right);
+            }];
+        }else
+            [obj mas_distributeViewsAlongAxis:MASAxisTypeHorizontal  withFixedSpacing:fixedSpacing leadSpacing:insets.left tailSpacing:insets.right];
     }];
     
     [verticalArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:lineSpacing leadSpacing:insets.top tailSpacing:insets.bottom];
+        if (obj.count < 2) {
+            [obj mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.offset(insets.top);
+                make.bottom.offset(-insets.bottom);
+            }];
+        }else
+            [obj mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:lineSpacing leadSpacing:insets.top tailSpacing:insets.bottom];
     }];
 }
 
@@ -82,11 +94,23 @@
     NSArray<NSArray *> *horizontalArray = axis == GridAxisTypeHorizontal ? linearArray : nolinearArray;
     NSArray<NSArray *> *verticalArray = axis == GridAxisTypeHorizontal ? nolinearArray : linearArray;
     [horizontalArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedItemLength:size.width leadSpacing:insets.left tailSpacing:insets.right];
+        if (obj.count < 2) {
+            [obj.firstObject mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.offset(insets.left);
+                make.right.offset(-insets.right);
+            }];
+        }else
+            [obj mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedItemLength:size.width leadSpacing:insets.left tailSpacing:insets.right];
     }];
     
     [verticalArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedItemLength:size.height leadSpacing:insets.top tailSpacing:insets.bottom];
+        if (obj.count < 2) {
+            [obj.firstObject mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.offset(insets.top);
+                make.bottom.offset(-insets.bottom);
+            }];
+        }else
+            [obj mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedItemLength:size.height leadSpacing:insets.top tailSpacing:insets.bottom];
     }];
 }
 
